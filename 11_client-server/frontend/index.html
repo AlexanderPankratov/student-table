@@ -1,0 +1,86 @@
+  <!DOCTYPE html>
+  <html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+
+<section class="main">
+  <div class="container-sm">
+    <h1>Список студентов</h1>
+
+    <div class="mb-3">
+      <form class="form" id="add-student">
+        <div class="form-container">
+          <div class="wrap-input">
+            <div class="input-box mb-2">
+              <input type="text" id="input-name" placeholder="Имя"
+                class="form-control input-name input-enter input">
+              </div>
+            <div class="input-box mb-2">
+              <input type="text" id="input-lastname" placeholder="Отчетство"
+                class="form-control input-lastname input-enter input">
+              </div>
+            <div class="input-box mb-2">
+              <input type="text" id="input-surname" placeholder="Фамилия"
+                class="form-control input-surname input-enter input">
+              </div>
+            <div class="input-box mb-2">
+              <input type="text" id="input-faculty" placeholder="Факультет"
+                class="form-control input-faculty input-enter input">
+              </div>
+            <div class="input-box mb-2">
+              <input type="date" id="input-date" class="form-control input-date input-enter input">
+            </div>
+            <div class="input-box">
+              <input type="number" id="input-start" placeholder="Год поступления"
+                class="form-control mb-3 input-start input-enter input">
+            </div>
+
+          </div>
+          <div class="wrap-btn">
+            <button id="btn-submit" class="btn btn-primary" type="submit" class="btn">добавить студента</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="input-group mb-3 wrap-input-search">
+      <input type="search" data-filter="fio" placeholder="ФИО" class="form-control input input-search input-search-fio">
+      <input type="search" data-filter="faculty" placeholder="Факультет"
+        class="form-control input input-search input-search-faculty">
+      <input type="search" data-filter="studyStart" placeholder="год поступления"
+        class="form-control input input-search input-search-start">
+      <input type="search" data-filter="end" placeholder="год окончания"
+        class="form-control input input-search input-search-end">
+    </div>
+
+    <table class="table table-dark table-striped student-table table-info">
+      <thead>
+        <th data-sort="fio">ФИО</th>
+        <th data-sort="faculty">Факультет</th>
+        <th data-sort="birthday">Дата рождения</th>
+        <th data-sort="studyStart">Годы обучения</th>
+      <tbody id="student-list">
+
+      </tbody>
+      </thead>
+    </table>
+  </div>
+</section>
+
+
+
+    <script defer type="module" src="js/main.js"></script>
+  </body>
+
+  </html>
+
+
